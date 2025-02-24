@@ -17,6 +17,7 @@ body * {
 
 .page {
     height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
 }
@@ -125,11 +126,15 @@ canvas {
 
 @media only screen and (max-width: 600px) {
     
+    .about-content{
+        justify-content:flex-start;
+    }
+
     .about{
         width: 80vw;
     }
 
-    .about .title{
+    .about .title{  
         font-size: 30px;
     }
 
