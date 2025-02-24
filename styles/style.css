@@ -1,0 +1,153 @@
+body,
+body * {
+    margin: 0;
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    background-color: none;
+
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}
+
+.page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    height: 10vh;
+    min-height: 10vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: calc(10px + 0.5vw);
+
+    display: none;
+}
+
+.navbar a {
+    margin-right: 20px;
+    padding: 25px;
+
+    font-weight: 600;
+    font-size: 20px;
+
+    border: 3px black solid;
+    color: black;
+    cursor: pointer;
+}
+
+.navbar a:first-child {
+    color: white;
+    background-color: black;
+}
+
+.navbar a:hover {
+    color: white;
+    background-color: black;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    padding: calc(10px + .5vw);
+    margin-top: 10px;
+}
+
+.footer a {
+    padding-right: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+/* 
+    ABOUT CONTENT 
+*/
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+
+.about .title {
+    margin-bottom: 20px;
+
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.about .subtitle {
+    padding: 10px;
+    margin-bottom: 50px;
+
+    width: fit-content;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+
+    background-color: black;
+}
+
+.about .description {
+    max-width: 50vw;
+    line-height: 30px;
+}
+
+/* 
+    CANVAS 
+*/
+
+canvas {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    .about{
+        width: 80vw;
+    }
+
+    .about .title{
+        font-size: 30px;
+    }
+
+    .about .subtitle{
+        font-size: 15px;
+    }
+
+    .about .description{
+        font-size: 12px;
+        max-width: 80vw;
+    }
+
+    .footer{
+        margin: 0;
+        justify-content: space-around;
+    }
+
+    .footer a{
+        font-size: 12px;
+    }
+}
