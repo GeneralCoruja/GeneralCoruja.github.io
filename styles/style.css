@@ -16,7 +16,6 @@ body * {
 }
 
 .page {
-    height: 100vh;
     height: 100dvh;
     display: flex;
     flex-direction: column;
@@ -65,7 +64,9 @@ body * {
 
 .footer a {
     padding-right: 30px;
+    
     color: black;
+    font-weight: 450;
     cursor: pointer;
 }
 
@@ -125,34 +126,44 @@ canvas {
 
 
 @media only screen and (max-width: 600px) {
-    
-    .about-content{
-        justify-content:flex-start;
+
+    body{
+        overscroll-behavior-y: contain;
+        overscroll-behavior: none;
     }
 
-    .about{
-        width: 80vw;
+    page {
+        height: 100dvh;
+        height: 100svh;
     }
 
-    .about .title{  
-        font-size: 30px;
+    .about-content {
+        justify-content: center ;
     }
 
-    .about .subtitle{
-        font-size: 15px;
+    .about {
+        width: 85vw;
     }
 
-    .about .description{
+    .about .title {
+        font-size:  25px;
+    }
+
+    .about .subtitle {
+        font-size: 14px;
+    }
+
+    .about .description {
         font-size: 12px;
         max-width: 80vw;
     }
 
-    .footer{
+    .footer {
         margin: 0;
         justify-content: space-around;
     }
 
-    .footer a{
+    .footer a {
         font-size: 12px;
     }
 }

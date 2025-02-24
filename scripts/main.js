@@ -1,12 +1,8 @@
 const DEFAULT_BRUSH_COLOR = '#000000';
 var lastMousePos = null;
-var isMobile = false;
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        isMobile = true;
-    }
 }
 
 function draw() {
