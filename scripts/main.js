@@ -2,7 +2,9 @@ const DEFAULT_BRUSH_COLOR = '#000000';
 var lastMousePos = null;
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    if(!mobileCheck()){
+        createCanvas(windowWidth, windowHeight);
+    }
 }
 
 function draw() {

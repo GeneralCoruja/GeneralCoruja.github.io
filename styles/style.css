@@ -1,6 +1,8 @@
+html,
 body,
-body * {
+* {
     margin: 0;
+    max-width: 100%;
     font-family: "IBM Plex Mono", serif;
     font-weight: 400;
     font-style: normal;
@@ -15,77 +17,49 @@ body * {
     /* Standard syntax */
 }
 
+
 .page {
-    height: 100dvh;
+    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.navbar {
-    height: 10vh;
-    min-height: 10vh;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: calc(10px + 0.5vw);
-
-    display: none;
-}
-
-.navbar a {
-    margin-right: 20px;
-    padding: 25px;
-
-    font-weight: 600;
-    font-size: 20px;
-
-    border: 3px black solid;
-    color: black;
-    cursor: pointer;
-}
-
-.navbar a:first-child {
-    color: white;
-    background-color: black;
-}
-
-.navbar a:hover {
-    color: white;
-    background-color: black;
-}
-
-.footer {
-    display: flex;
-    flex-direction: row;
-    padding: calc(10px + .5vw);
-    margin-top: 10px;
-}
-
-.footer a {
-    padding-right: 30px;
-    
-    color: black;
-    font-weight: 450;
-    cursor: pointer;
+.page ~ .page{
+    height: fit-content;
 }
 
 /* 
     ABOUT CONTENT 
 */
 
-.about-content {
+.content-wrapper {
+    padding: 10vh 10vw;
+
     display: flex;
     flex-direction: column;
-    flex-grow: 2;
+    flex-grow: 1;
     justify-content: center;
     align-items: center;
 }
 
-.about {
+.content-wrapper .title{
+    padding: 5vh 0vw;
+
+    font-weight: 800;
+    font-size: 42px;
+}
+
+.content {
     display: flex;
+}
+
+.about {
+    width: 50vw;
+    
     flex-direction: column;
-    width: fit-content;
+    justify-content: center;
+    align-content: center;
 }
 
 
@@ -103,15 +77,89 @@ body * {
     width: fit-content;
     color: white;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 500;
 
     background-color: black;
 }
 
 .about .description {
-    max-width: 50vw;
-    line-height: 30px;
+    line-height: 25px;
+    font-weight: normal;
+    font-size: 16px;
 }
+
+
+/* 
+    PROJECTS 
+*/
+
+.projects {
+    width: 80vw;
+    
+    padding: 10vh 0vw;
+
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box {
+    max-width: 350px;
+    width: 30vw;
+    width: fit-content;
+    min-height: 300px;
+    height: fit-content;
+    
+    margin: 5vh 2vw ;
+
+    display: flex;
+    flex-direction: column;
+
+
+    border: 3px black solid;
+    box-shadow: 5px 5px black;
+
+    
+    transition: all 100ms ease-in;
+}
+
+.box .title {
+    padding: 20px 20px;
+    font-weight: 600;
+    font-size: 32px;
+    color: black;
+}
+
+.box .description {
+    padding: 20px 20px;
+    
+    font-weight: normal;
+    font-size: 15px;
+    color: black;
+
+    flex-grow: 2;
+}
+
+.box .date {
+    padding: 10px 20px 20px 20px;
+
+    text-align: end;
+    font-weight: 400;
+    font-size: 12px;
+    color: black;
+}
+
+.box:hover, .box:active{
+    translate: 5px;
+    box-shadow: none;
+    background-color: black;
+}
+
+.box:hover p, .box:hover h1, .box:active p, .box:active h1{
+    color: white;
+}
+
 
 /* 
     CANVAS 
@@ -124,10 +172,9 @@ canvas {
     left: 0;
 }
 
-
 @media only screen and (max-width: 600px) {
 
-    body{
+    body {
         overscroll-behavior-y: contain;
         overscroll-behavior: none;
     }
@@ -137,33 +184,40 @@ canvas {
         height: 100svh;
     }
 
-    .about-content {
-        justify-content: center ;
-    }
-
     .about {
-        width: 85vw;
+        justify-content: center;
+        width: 90vw;
     }
 
     .about .title {
-        font-size:  25px;
+        margin:0px;
+        padding: 10px 0px;
+
+        font-size: 25px;
+        line-height: 25 px;
+        margin-bottom: 10px;
+        align-self: center;
     }
 
     .about .subtitle {
-        font-size: 14px;
+        margin-top:0px;
+
+        font-size: 15px;
+        align-self: center;
     }
 
     .about .description {
-        font-size: 12px;
         max-width: 80vw;
+
+        text-align: center;
+        font-size: 14px;
     }
 
-    .footer {
-        margin: 0;
-        justify-content: space-around;
-    }
 
-    .footer a {
-        font-size: 12px;
+    .box {
+        max-width: 300px;
+        width: fit-content;
+        height: fit-content;
+        min-height: 200px;
     }
 }
