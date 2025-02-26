@@ -1,3 +1,8 @@
+if(mobileCheck()){
+    document.getElementsByClassName('canvas-tools')[0].style.display = 'none';
+}
+
+
 function openPage(url){
     window.open(url, '_blank').focus();
 }
