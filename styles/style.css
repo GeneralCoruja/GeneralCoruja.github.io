@@ -119,7 +119,7 @@ body,
 
     border: 3px black solid;
     box-shadow: 5px 5px black;
-
+    background-color: white;
     
     transition: all 100ms ease-in;
 }
@@ -141,6 +141,15 @@ body,
     flex-grow: 2;
 }
 
+.box .tag{
+    margin-left: 20px;
+    padding: 10px;
+    width: fit-content;
+    
+    color:white;
+    background-color: black;
+}
+
 .box .date {
     padding: 10px 20px 20px 20px;
 
@@ -158,6 +167,11 @@ body,
 
 .box:hover p, .box:hover h1, .box:active p, .box:active h1{
     color: white;
+}
+
+.box:hover .tag, .box:active .tag{
+    background-color: white;
+    color:black;
 }
 
 

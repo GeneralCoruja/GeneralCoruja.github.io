@@ -3,7 +3,7 @@ var lastMousePos = null;
 
 function setup() {
     if(!mobileCheck() || windowWidth > 600){
-        createCanvas(windowWidth, windowHeight);
+        createCanvas(document.body.offsetWidth, document.body.offsetHeight);
     }
 }
 
@@ -25,7 +25,7 @@ function pencilDraw() {
 
 
 function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
+    resizeCanvas(document.body.offsetWidth, document.body.offsetHeight);
 }
 
 
