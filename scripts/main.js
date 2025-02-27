@@ -1,14 +1,29 @@
 const DEFAULT_BRUSH_COLOR = '#000000';
+const footerOffset = 50;
 var lastMousePos = null;
+
 
 function setup() {
     if(!mobileCheck() || windowWidth > 600){
-        createCanvas(document.body.offsetWidth, document.body.offsetHeight);
+        createCanvas(document.body.offsetWidth, document.body.offsetHeight - footerOffset);
     }
 }
 
 function draw() {
     pencilDraw();
+}
+
+function windowResized() {
+    resizeCanvas(document.body.offsetWidth, document.body.offsetHeight - footerOffset);
+}
+
+
+function mouseReleased() {
+    lastMousePos = null;
+}
+
+function touchEnded(){
+    lastMousePos = null;
 }
 
 function pencilDraw() {
@@ -23,16 +38,6 @@ function pencilDraw() {
     }
 }
 
-
-function windowResized() {
-    resizeCanvas(document.body.offsetWidth, document.body.offsetHeight);
-}
-
-
-function mouseReleased() {
-    lastMousePos = null;
-}
-
-function touchEnded(){
-    lastMousePos = null;
+function clearCanvas(){
+    background(255);
 }
