@@ -2,7 +2,7 @@ const DEFAULT_BRUSH_COLOR = '#000000';
 var lastMousePos = null;
 
 function setup() {
-    if(!mobileCheck()){
+    if(!mobileCheck() || windowWidth > 600){
         createCanvas(windowWidth, windowHeight);
     }
 }
