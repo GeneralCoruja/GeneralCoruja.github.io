@@ -29,6 +29,30 @@ body,
     height: fit-content;
 }
 
+.title{
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.subtitle{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.description {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.text-underline{
+    text-decoration: underline;
+}
+
+.mobile-show{
+    display: none;
+}
+
 /* 
     ABOUT CONTENT 
 */
@@ -45,16 +69,18 @@ body,
 
 .content-wrapper .title{
     padding: 5vh 0vw;
-
-    font-weight: 800;
-    font-size: 42px;
 }
 
 .content {
     display: flex;
 }
 
-.about {
+
+/* 
+    ABOUT
+ */
+
+ .about {
     width: 50vw;
     
     flex-direction: column;
@@ -64,28 +90,19 @@ body,
 
 
 .about .title {
-    margin-bottom: 20px;
-
-    font-size: 50px;
-    font-weight: 800;
+    margin: 0 0 20px 0;
+    padding: 0;
+    display: inline;
 }
 
 .about .subtitle {
+    margin: 0;
+    margin: 0px 0px 50px 0px;
     padding: 10px;
-    margin-bottom: 50px;
 
     width: fit-content;
     color: white;
-    font-size: 20px;
-    font-weight: 500;
-
     background-color: black;
-}
-
-.about .description {
-    line-height: 25px;
-    font-weight: normal;
-    font-size: 16px;
 }
 
 
@@ -95,7 +112,6 @@ body,
 
 .projects {
     width: 80vw;
-    
     padding: 10vh 10vw;
 
     justify-content: start;
@@ -126,16 +142,13 @@ body,
 
 .box .title {
     padding: 20px 20px;
-    font-weight: 600;
-    font-size: 32px;
+    
+    font-size: 20px;
     color: black;
 }
 
 .box .description {
     padding: 20px 20px;
-    
-    font-weight: normal;
-    font-size: 15px;
     color: black;
 
     flex-grow: 2;
@@ -210,9 +223,30 @@ canvas {
         overscroll-behavior: none;
     }
 
-    page {
+    .page {
         height: 100dvh;
         height: 100svh;
+    }
+
+    .title{
+        font-size: 32px;
+    }
+
+    .subtitle{
+        font-size: 16px;
+    }
+
+    .description{
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .mobile-hide{
+        display: none;
+    }
+
+    .mobile-show{
+        display: inline;
     }
 
     .about {
@@ -221,34 +255,48 @@ canvas {
     }
 
     .about .title {
-        margin:0px;
-        padding: 10px 0px;
-
-        font-size: 25px;
-        line-height: 25 px;
-        margin-bottom: 10px;
-        align-self: center;
+        display: block;
+        margin: 0 0 10px 0;
+        padding: 0;
+        
+        text-align: center;
     }
 
     .about .subtitle {
         margin-top:0px;
-
-        font-size: 15px;
+        width: 300px;
+        
         align-self: center;
+        text-align: center;
     }
-
+    
     .about .description {
         max-width: 80vw;
+        margin-top: 3vh;
 
         text-align: center;
-        font-size: 14px;
     }
-
 
     .box {
         max-width: 300px;
         width: fit-content;
         height: fit-content;
         min-height: 200px;
+    }
+
+    .box .title{
+        font-size: 20px;
+    }
+
+    .box .description{
+        font-size: 15px;
+    }
+
+    .box .tag{
+        font-size: 15px;
+    }
+
+    .box .date{
+        font-size: 12px;
     }
 }
