@@ -277,6 +277,10 @@ canvas {
         text-align: center;
     }
 
+    .projects{
+        padding-top: 5vh;
+    }
+
     .box {
         max-width: 300px;
         width: fit-content;
