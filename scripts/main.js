@@ -4,8 +4,10 @@ var lastMousePos = null;
 
 
 function setup() {
-    if(!mobileCheck() || windowWidth > 600){
+    if(!mobileCheck() && windowWidth > 600){
         createCanvas(document.body.offsetWidth, document.body.offsetHeight - footerOffset);
+    }else{
+        remove();
     }
 }
 
